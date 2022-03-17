@@ -1,0 +1,44 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(122, 45, 209)
+main.Position = UDim2.new(0.0598395988, 0, 0.481290311, 0)
+main.Size = UDim2.new(0, 485, 0, 220)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(127, 76, 255)
+label.Size = UDim2.new(0, 485, 0, 50)
+label.Font = Enum.Font.SciFi
+label.Text = "Dupe Method | Made by Krxm"
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextSize = 14.000
+
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(126, 33, 193)
+TextButton.Position = UDim2.new(0.0639175251, 0, 0.26363638, 0)
+TextButton.Size = UDim2.new(0, 422, 0, 148)
+TextButton.Font = Enum.Font.TitilliumWeb
+TextButton.Text = "START!"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 100.000
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/kjrmz/test/main/test"))()
+end)
